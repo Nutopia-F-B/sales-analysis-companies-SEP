@@ -1516,3 +1516,9 @@ body {
         white-space: nowrap;
     }
 }
+
+/* تعديل حجم الأيقونات داخل الـ KPI Cards */
+.kpi-card__icon {
+    font-size: 30px; /* يمكنك تعديل الحجم حسب احتياجك */
+    margin-bottom: 10px; /* تعديل المسافة بين الأيقونة والنص */
+}
