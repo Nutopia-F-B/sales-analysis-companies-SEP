@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحليل الشاملة للفروع - الربع الثالث 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>لوحة التحليل الشاملة للفروع</h1>
+            <p class="period">الربع الثالث 2025 (يوليو - سبتمبر)</p>
+            
+            <div class="kpi-cards">
+                <div class="kpi-card">
+                    <div class="kpi-value">23.59M</div>
+                    <div class="kpi-label">إجمالي المبيعات</div>
+                    <div class="kpi-unit">جنيه مصري</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value"> 5,741,484 </div>
+                    <div class="kpi-label">اجمالي ايردات الواحة لــ3شهر</div>
+                    <div class="kpi-unit">أعلي فرع للمبيعات</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value">13276</div>
+                    <div class="kpi-label">إجمالي الخصومات</div>
+                    <div class="kpi-unit">لمعظم الفروع</div>
+                </div>
+                <div class="kpi-card">
+                     <div class="kpi-value">30.3</div>
+                    <div class="kpi-label">متوسط سعر الوحدة</div>
+                    <div class="kpi-sub">جنيه مصري</div>
+                </div>
+            </div>
+        </header>
+
+        <section class="executive-summary">
+            <h2>📊 الملخص التنفيذي</h2>
+            <div class="summary-content">
+                <div class="performance-overview">
+                    <h3>نظرة عامة على الأداء</h3>
+                    <p>يحقق فرع <strong>الواحة</strong> أعلى إيرادات بقيمة 5.74 مليون جنيه (24.34% من الحصة السوقية)، يليه فرع <strong>القاهرة</strong> بقيمة 5.49 مليون جنيه (23.27%). بينما يسجل فرع <strong>F15</strong> أقل الإيرادات كونه فرع جديد بدأ العمل في سبتمبر فقط.</p>
+                    
+                    <div class="key-insight">
+                        <h4>💡 الرؤية الرئيسية</h4>
+                        <p>فرع <strong>الواحة</strong> هو الفرع الوحيد الذي حقق نمواً إيجابياً بنسبة +12.62%، مما يجعله النموذج المثالي للاستراتيجيات المستقبلية.</p>
+                    </div>
+                </div>
+                
+                <div class="top-performers">
+                    <div class="top-section">
+                        <h4>🏆 أفضل 3 فروع أداءً</h4>
+                        <ul>
+                            <li><strong>الواحة:</strong> 5.74M جنيه - نمو 12.62%</li>
+                            <li><strong>القاهرة:</strong> 5.49M جنيه - تراجع 12.99%</li>
+                            <li><strong>متاجر:</strong> 5.35M جنيه - تراجع 16.46%</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bottom-section">
+                        <h4>⚠️ الفروع التي تحتاج تحسين</h4>
+                        <ul>
+                            <li><strong>راية:</strong> 3.20M جنيه - تراجع 23.28%</li>
+                            <li><strong>سازرلاند:</strong> 2.82M جنيه - تراجع 7.81%</li>
+                            <li><strong>F15:</strong> 984K جنيه - فرع جديد (إمكانيات واعدة)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts-section">
+            <h2>📈 الرسوم البيانية التفاعلية مع التحليل المفصل</h2>
+            
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>إجمالي المبيعات والحصة السوقية</h3>
+                    <div style="position: relative; height: 400px;">
+                        <canvas id="totalSalesChart"></canvas>
+                    </div>
+                    <div class="chart-analysis">
+                        <h4>📋 تحليل المبيعات الإجمالية</h4>
+                        <p>يهيمن فرع <strong>الواحة</strong> على السوق بحصة 24.34% وإيرادات 5.74 مليون جنيه. الفروع الثلاثة الأولى (الواحة، القاهرة، متاجر) تستحوذ على 70.29% من إجمالي السوق، مما يشير إلى تركز قوي في الأداء. الفجوة الكبيرة بين الفروع الأولى والأخيرة تعكس الحاجة لتحسين مستهدفة.</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>الاتجاهات الشهرية للمبيعات</h3>
+                    <div style="position: relative; height: 400px;">
+                        <canvas id="monthlyTrendChart"></canvas>
+                    </div>
+                    <div class="chart-analysis">
+                        <h4>📈 تحليل الاتجاهات الموسمية</h4>
+                        <p>يُظهر فرع <strong>الواحة</strong> تحسناً مستمراً من 1.82M في يوليو إلى 2.05M في سبتمبر (+12.7%). بينما تُظهر معظم الفروع الأخرى تراجعاً، خاصة فرع راية الذي انخفض من 1.22M إلى 0.94M (-23.3%). فرع F15 الجديد سجل دخولاً قوياً بـ 984K في سبتمبر فقط.</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>متوسط قيمة المعاملات لكل فرع</h3>
+                    <div style="position: relative; height: 400px;">
+                        <canvas id="avgTransactionChart"></canvas>
+                    </div>
+                    <div class="chart-analysis">
+                        <h4>💰 تحليل قيمة المعاملات</h4>
+                        <p>فرع <strong>الواحة</strong> يحقق أعلى متوسط قيمة للمعاملات بـ 7,665 جنيه، متفوقاً على المتوسط العام بـ 32%. هذا يعكس استراتيجية فعالة وقاعدة عملاء ذات قوة شرائية عالية. فروع القاهرة ومتاجر تحقق متوسطات جيدة (6,398 و 6,580 على التوالي)، بينما تحتاج باقي الفروع لتحسين هذا المؤشر.</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>مقارنة معدلات النمو</h3>
+                    <div style="position: relative; height: 400px;">
+                        <canvas id="growthRatesChart"></canvas>
+                    </div>
+                    <div class="chart-analysis">
+                        <h4>📊 تحليل النمو والأداء</h4>
+                        <p>فرع <strong>الواحة</strong> هو الفرع الوحيد بنمو إيجابي (+12.62%)، مما يؤكد قوة استراتيجيته التشغيلية. فرع راية يواجه أكبر تحدي بتراجع -23.28% ويحتاج الي تدخل . الفروع الكبيرة (القاهرة ومتاجر) تُظهر تراجعاً مقلقاً رغم حجمها، مما يشير لتحديات في الاستراتيجية التسويقية أو التشغيلية.</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>توزيع الأقسام الرئيسية</h3>
+                    <div style="position: relative; height: 400px;">
+                        <canvas id="categoriesChart"></canvas>
+                    </div>
+                    <div class="chart-analysis">
+                        <h4>🏪 تحليل فئات المنتجات</h4>
+                        <p>قسم <strong>Market</strong> يهيمن بـ 4.53M جنيه (19.2%)، يليه Pasta بـ 2.13M (9.0%). هذا التنوع يعكس قدرة الشبكة على تلبية احتياجات متعددة من المشروبات والوجبات والمواد الغذائية. قسم Turkish Coffee يحقق 7.7% من المبيعات.</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>مقارنة مؤشرات الأداء</h3>
+                    <div style="position: relative; height: 400px;">
+                        <canvas id="performanceMetricsChart"></canvas>
+                    </div>
+                    <div class="chart-analysis">
+                        <h4>🎯 تحليل المؤشرات المتكامل</h4>
+                        <p>يُظهر الرسم البياني الرداري التفوق الشامل لفرع <strong>الواحة</strong> عبر جميع المقاييس. فرع القاهرة يتفوق في عدد المعاملات . التوازن المثالي يتطلب تحقيق أداء جيد عبر جميع المؤشرات، وهو ما يميز فرع الواحة كنموذج للتطبيق.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detailed-analysis">
+            <h2>🔍 التحليل التفصيلي للأداء</h2>
+            
+            <div class="analysis-sections">
+                <div class="analysis-section">
+                    <h3>🏢 تحليل عميق لأداء الفروع</h3>
+                    <div class="branch-insights">
+                        <div class="branch-insight">
+                            <h4>فرع الواحة - النموذج المثالي</h4>
+                            <p>يحقق فرع الواحة أداءً استثنائياً كونه الفرع الوحيد الذي سجل نمواً إيجابياً +12.62% مع أعلى متوسط للمعاملات 7,665 جنيه. وتنويع المنتجات تجعله النموذج المثالي للفروع هذا الشهر. المنتجات الرائدة تشمل Redbull Can (648K) و Turkish Coffee (308K).</p>
+                        </div>
+                        
+                        <div class="branch-insight">
+                            <h4>فرع القاهرة - إمكانيات كبيرة غير مستغلة</h4>
+                            <p>فرع القاهرة يحتل المركز الثاني بإيرادات 5.49 مليون جنيه رغم التراجع -12.99%. يتميز بأعلى عدد معاملات  مما يشير إلى قاعدة عملاء واسعة تحتاج لتحسين متوسط الإنفاق للفرد إلى مستوى أقرب لفرع الواحة.</p>
+                        </div>
+                        
+                        <div class="branch-insight">
+                            <h4>فرع متاجر - أداء متوازن يحتاج تطوير</h4>
+                            <p>فرع متاجر يحقق ثالث أعلى إيرادات 5.35 مليون جنيه مع متوسط معاملات جيد 6,580 جنيه. التراجع -16.46% يتطلب مراجعة لبيع المنتاجات، خاصة مع التركيز على منتجات الـ Pasta
+,Fattah التي تحقق أداءً جيداً.</p>
+                        </div>
+                        
+                        <div class="branch-insight">
+                            <h4>فرع راية -  يتطلب تدخل </h4>
+                            <p>فرع راية يواجه تحديات كبيرة بتراجع -23.28% رغم متوسط معاملات معقول. يحتاج تدخل فوري لمعالجة انخفاض الأداء، مع التركيز على منتجات Chicken Fattah التي ما زالت تحقق مبيعات جيدة.</p>
+                        </div>
+                        
+                        <div class="branch-insight">
+                            <h4>فرع سازرلاند - تخصص في القهوة والحلويات</h4>
+                            <p>فرع سازرلاند يحقق أداءً متوسطاً مع تراجع محدود -7.81%. التركيز على القهوة والحلويات يميزه عن الفروع الأخرى، مع Spanish Latte و Turkish Coffee كمنتجات رائدة لهذا الفرع عن باقية.</p>
+                        </div>
+                        
+                        <div class="branch-insight">
+                            <h4>فرع F15 - بداية واعدة للتوسع</h4>
+                            <p>فرع F15 الجديد يُظهر إمكانيات واعدة بتحقيق 984 ألف جنيه في شهر واحد فقط. التركيز على الوجبات الرئيسية (Chicken Fattah, Crispy Pasta) استراتيجية ناجحة. هذا الفرع يمثل فرصة لتطبيق أفضل الممارسات  من نجاح فرع الواحة.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analysis-section">
+                    <h3>📊 تحليل فئات المنتجات للفروع مجمعة</h3>
+                    <div class="category-analysis">
+                        <p><strong>قسم الماركت (Market):</strong> يهيمن بـ 4.53 مليون جنيه (19.2%) ويشمل المشروبات والوجبات الخفيفة. هذا القسم يعكس الطلب العالي على المنتجات الاستهلاكية السريعة.</p>
+                        
+                        <p><strong>قسم المكرونة (Pasta):</strong> يحقق 2.13 مليون جنيه (9.0%) ويمثل قوة في الوجبات الرئيسية. إمكانيات نمو كبيرة مع تطوير وصفات جديدة.</p>
+                        
+                        <p><strong>قسم السندويتشات:</strong> بـ 2.01 مليون جنيه (8.5%) يلبي احتياجات الوجبات السريعة. التوازن الجيد مع باقي الأقسام يعكس تنوع قاعدة العملاء.</p>
+                        
+                        <p><strong>القهوة التركية:</strong> تحقق 1.81 مليون جنيه (7.7%) وتمثل قوة مميزة في قطاع المشروبات المتخصصة.</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-section">
+                    <h3>📈 تحليل أنماط النمو</h3>
+                    <div class="growth-analysis">
+                        <p>الواحة هو الفرع الوحيد بنمو إيجابي +12.62% بينما معظم الفروع تواجه تحديات موسمية. هذا التباين يشير إلى عوامل خاصة بفرع الواحة تستحق الدراسة والتطبيق:</p>
+                        <ul>
+                            <li><strong>الاستراتيجية:</strong> حيث ان إضافة قسم الماركت له تأثير واسع جدا للفرع -(28% من إيرادات فرع)</li>
+                            <li><strong>تنويع المنتجات:</strong> توزيع متوازن عبر جميع الفئات</li>
+                            <li><strong>الموقع الجغرافي:</strong>  منطقة ذات نمو اقتصادي</li>
+                            <li><strong>جودة الخدمة:</strong> معدلات رضا عملاء أعلى تؤدي لتكرار الزيارات</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="performance-tables">
+            <h2>📋 جداول الأداء التفصيلية</h2>
+            
+            <div class="table-container">
+                <h3>مؤشرات الأداء الشاملة للفروع</h3>
+                <table class="performance-table">
+                    <thead>
+                        <tr>
+                            <th>الفرع</th>
+                            <th>إجمالي المبيعات</th>
+                            <th>الحصة السوقية</th>
+                            <th>متوسط المعاملات</th>
+                            
+                            <th>معدل النمو</th>
+                            <th>التصنيف</th>
+                        </tr>
+                    </thead>
+                    <tbody id="performanceTableBody">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="top-products-section">
+                <h3>أفضل المنتجات لكل فرع</h3>
+                <div class="products-grid" id="topProductsGrid">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="strategic-analysis">
+            <h2>🎯 التحليل الاستراتيجي المتقدم</h2>
+            
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>ترتيب الفروع وموقعها التنافسي</h3>
+                    <div class="ranking-list" id="branchRanking">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>فرص النمو الاستراتيجية</h3>
+                    <ul class="opportunities-list">
+                        <li>فرع <strong>الواحة</strong>: الحفاظ على الزخم الإيجابي وتوسيع الخدمات أو فتح فروع في مناطق مشابهة</li>
+                        <li>فرع <strong>F15</strong>: استغلال كونه فرع جديد لتطبيق أفضل الممارسات المستلهمة من نجاح الواحة</li>
+                        <li>فروع <strong>القاهرة ومتاجر</strong>: تحسين استراتيجيات رفع متوسط قيمة المعاملة والاحتفاظ بالعملاء</li>
+                        <li>فرع <strong>راية</strong>: إعادة هيكلة شاملة مع التركيز على المنتجات عالية الأداء</li>
+                        <li>فرع <strong>سازرلاند</strong>: تطوير هوية متخصصة في القهوة والحلويات المميزة</li>
+                    </ul>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>تحليل الفجوات التشغيلية</h3>
+                    <div class="gaps-analysis">
+                        <p><strong>فجوة الإيرادات:</strong> فرق 4.76M جنيه بين أعلى (الواحة) وأقل فرع أداءً (F15 - جديد)</p>
+                        <p><strong>فجوة النمو:</strong> فرق 35.9% بين أفضل نمو (الواحة +12.62%) وأسوأ أداء (راية -23.28%)</p>
+                        <p><strong>فجوة الكفاءة:</strong> اختلاف كبير في الإنتاجية بين الفروع يتطلب توحيد المعايير</p>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>رؤى الحصة السوقية المتقدمة</h3>
+                    <div class="market-insights">
+                        <p><strong>الهيمنة:</strong> فروع الواحة والقاهرة ومتاجر تسيطر على 70.29% من السوق</p>
+                        <p><strong>الفرص:</strong> الفروع الثلاثة الأخرى تمثل 29.71% فقط مع إمكانيات نمو كبيرة</p>
+                        <p><strong>التوسع:</strong> فرص واعدة في المناطق ذات الأداء العالي مثل فروع قاهره ننصح بتوسع بها</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommendations">
+            <h2>💡 التوصيات الاستراتيجية المتكاملة</h2>
+            
+            <div class="recommendations-grid">
+                <div class="recommendation-card urgent">
+                    <h3>🚨 إجراءات عاجلة - الأولوية القصوى</h3>
+                    <ul>
+                        <li>وضع خطة تحسين فورية لفرع <strong>راية</strong> لمعالجة التراجع الحاد -23.28%</li>
+                        <li>تحليل أسباب تراجع فروع <strong>القاهرة ومتاجر</strong> رغم حجمها الكبير </li>
+                        
+                        <li>تطبيق نظام مراقبة أداء أسبوعي للفروع المتراجعة</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-card growth">
+                    <h3>📈 استراتيجيات النمو المستدام</h3>
+                    <ul>
+                        <li>الاستثمار في تطوير فرع <strong>F15</strong> كنموذج للفروع الجديدة مع تطبيق استراتيجيات الواحة</li>
+                        <li>توسيع نطاق خدمات فرع <strong>الواحة</strong> أو افتتاح فرع جديد في منطقة مشابهة</li>
+                        <li>تطبيق برامج تحفيزية لزيادة متوسط قيمة المعاملة في جميع الفروع إلى 6,500+</li>
+                        <li>استراتيجية تسعير ديناميكية مبنية على تحليل البيانات</li>
+                        <li>برامج ولاء العملاء لزيادة تكرار الزيارات بنسبة 25%</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-card optimization">
+                    <h3>🔧 تحسين فئات المنتجات</h3>
+                    <ul>
+                        <li>التوسع في قسم <strong>Market</strong> الذي يمثل 19.2% من إجمالي المبيعات لتحقيق 22%</li>
+                        <li>تطوير منتجات قسم <strong>Pasta</strong> الجديدة لزيادة نصيبه من 9% إلى 12%</li>
+                        <li> تحسين وتسويق منتجات بالشركات <strong>Turkish Coffee</strong> لاستغلال شعبيتها</li>
+                        <li>إدخال فئات جديدة بناءً على تفضيلات العملاء في كل فرع</li>
+                       
+                    </ul>
+                </div>
+
+                <div class="recommendation-card operational">
+                    <h3>⚙️ الكفاءة التشغيلية المتقدمة</h3>
+                    <ul> 
+                        <li>تحفيز الفروع ذات أعلى نمو شهري ذات الاداء المنخفض</li>
+                        <li>رفع كفاءة التشغيل في الفروع ذات الأداء المنخفض بنسبة ‎23%‎ ‎</li>
+                        <li>إطلاق عروض تسويقية على المنتجات متوسطة المبيعات لزيادة مبيعات الفروع منخفضة الأداء بنسبة ‎12–15%‎،</li>
+                        <li>توحيد سياسات الخصم لتقليل الفجوة الربحية بين الفروعً</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+      <footer class="dashboard-footer">
+    <div class="footer-content">
+        <p>📊 أُعِدَّ هذا التقرير بواسطة – <strong>وائل أحمد محمد</strong></p>
+        <p>
+            للتواصل عبر 
+            <a href="https://wa.me/201060060771" target="_blank" style="color:#25D366; font-weight:bold; text-decoration:none;">
+                واتس اب 📱
+            </a>
+        </p>
+    </div>
+</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
