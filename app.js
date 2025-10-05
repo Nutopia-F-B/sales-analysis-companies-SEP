@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeCharts() {
     initializeTotalSalesChart();
     initializeMonthlyTrendChart();
-    initializeAvgTransactionChart();
+    
     initializeGrowthRatesChart();
     initializeCategoriesChart();
     initializePerformanceMetricsChart();
@@ -244,55 +244,6 @@ function initializeMonthlyTrendChart() {
             interaction: {
                 intersect: false,
                 mode: 'index'
-            }
-        }
-    });
-}
-
-// 3. Average Transaction Chart
-function initializeAvgTransactionChart() {
-    const ctx = document.getElementById('avgTransactionChart').getContext('2d');
-    
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: branchData.names.map(name => branchDisplayNames[name] || name),
-            datasets: [{
-                label: 'متوسط قيمة المعاملة',
-                data: branchData.avgTransaction,
-                backgroundColor: chartColors.slice(0, 6),
-                borderRadius: 6
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            indexAxis: 'y',
-            plugins: {
-                legend: {
-                    display: false
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            return `المتوسط: ${formatNumber(context.raw)} جنيه`;
-                        }
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: function(value) {
-                            return formatNumber(value);
-                        }
-                    },
-                    title: {
-                        display: true,
-                        text: 'متوسط قيمة المعاملة (جنيه)'
-                    }
-                }
             }
         }
     });
